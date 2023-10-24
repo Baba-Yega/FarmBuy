@@ -10,7 +10,8 @@ if(isset($_POST['submit'])){
    $email = filter_var($email, FILTER_SANITIZE_STRING);
    $phone_number = $_POST['phone_number'];
    $gender = $_POST['gender'];
-   $pass = md5($_POST['pass']);
+   $pass = ($_POST['pass']);
+   // $pass = md5($_POST['pass']);
    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
    $cpass = md5($_POST['cpass']);
    $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);

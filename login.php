@@ -8,7 +8,8 @@ if(isset($_POST['submit'])){
 
    $email = $_POST['email'];
    $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $pass = md5($_POST['pass']);
+   $pass = ($_POST['pass']);
+   // $pass = md5($_POST['pass']);
    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
 
    $sql = "SELECT * FROM `users` WHERE email = ? AND password = ?";
@@ -88,7 +89,7 @@ if(isset($message)){
    </form>
 
 </section>
-
+<!-- admin hashed password: 5f4dcc3b5aa765d61d8327deb882cf99 -->
 
 </body>
 </html>
